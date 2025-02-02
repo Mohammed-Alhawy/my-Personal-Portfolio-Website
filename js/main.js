@@ -12,3 +12,27 @@ All_links.forEach((Link) => {
     Link.classList.add("Active");
   });
 });
+
+
+
+
+const opneMenu=document.querySelector('.nav-toggler')
+const menu=document.querySelector('.aside')
+const mainContent=document.querySelector('.main-content')
+
+opneMenu.addEventListener("click" , ()=>{
+  menu.classList.toggle("active-menu")
+  mainContent.classList.toggle("main-content-active")
+
+  if (menu.classList.contains('active-menu')) {
+    opneMenu.innerHTML=`<i class="ri-close-large-fill"></i>`
+    opneMenu.style.left="290px"
+  } else {
+    opneMenu.innerHTML=`<i class="ri-menu-line"></i>`
+    opneMenu.style.left="30px"
+  }
+
+})
+
+
+

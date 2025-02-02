@@ -49,7 +49,7 @@ img{
   background-color: var(--bg-black-900);
   min-height: 100vh;
   display: block;
-  padding: 0 30px;
+  padding: 0 60px;
   opacity: 1;
 }
 
@@ -99,7 +99,7 @@ img{
 }
 
 .section .container{
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .main-btn{
@@ -134,7 +134,6 @@ img{
   padding: 30px;
   background-color: var(--bg-black-100);
   position: fixed;
-  left: 0;
   top: 0;
   border-right:1px solid var(--bg-black-50) ;
   display: flex;
@@ -146,7 +145,7 @@ img{
 .aside .logo{
   position: absolute;
   text-transform: capitalize;
-  top: 50px;
+  top: 60px;
   font-size: 30px;
 }
 
@@ -213,6 +212,31 @@ img{
 }
 /* end aside */
 
+/* start nav-toggler */
+
+.nav-toggler{
+  position: fixed;
+  top: 15px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid var(--bg-black-50);
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-toggler i{
+  color: var(--skin-color);
+  font-size: 20px;
+}
+
+/* end nav-toggler */
 
 /* start Home section */
 
@@ -238,7 +262,7 @@ img{
   font-weight: 600;
   color: var(--skin-color);
   font-family: "Clicker Script", cursive;
-  font-size: 40px;
+  font-size: 33px;
 }
 
 .home .home-info .my-profession{
@@ -269,19 +293,19 @@ img{
 }
 
 .home .home-img img{
-  height: 420px;
+  height: 400px;
   margin: auto;
 }
 
 .home .home-img::before{
   content: "";
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   top: -40px;
   left: 0px;
-  border-top: 10px solid red;
-  border-left: 10px solid red;
+  border-top: 8px solid var(--skin-color);
+  border-left: 8px solid var(--skin-color);
 }
 
 .home .home-img::after{
@@ -289,11 +313,72 @@ img{
   position: absolute;
   bottom: -40px;
   right: 0;
-  width: 100px;
-  height: 100px;
-  border-bottom: 10px solid red;
-  border-right: 10px solid red;
+  width: 80px;
+  height: 80px;
+  border-bottom: 8px solid var(--skin-color);
+  border-right: 8px solid var(--skin-color);
 }
+
+
+
+@media(max-width:992px){
+  .home .row{
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 65px;
+  }
+  .home .home-info{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .home .home-img{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home .home-img img{
+    width: 80%;
+    height: auto !important;
+  }
+  
+.home .home-img::before{
+  height: 50px;
+  width: 50px;
+  left: -20px;
+  top: -20px;
+}
+
+.home .home-img::after{
+  height: 50px;
+  width: 50px;
+  right: -20px;
+  bottom: -20px;
+
+}
+
+}
+
+@media(max-width:380px){
+  .home .home-info .hello{
+    font-size: 20px;
+  }
+
+  .home .home-info .my-profession{
+    font-size: 20px;
+  }
+
+  .home .home-info .my-profession span{
+    font-size: 22px;
+  }
+
+  .home .home-info p{
+    font-size: 16px;
+  }
+
+}
+
+
+
 /* End Home section */
 
 .about .about-content {
@@ -517,6 +602,8 @@ img{
 
 .Contact .Question{
   text-align: center;
+  margin-top: -50px;
+  margin-bottom: 10px;
 }
 
 .Contact .Question h3{
@@ -569,8 +656,46 @@ img{
   transform: rotatey(180deg);
 }
 
-
-
-
-
 /* end Contact section */
+
+
+/* start Responsive */
+
+@media(max-width:1150px){
+  .nav-toggler{
+    display: flex ;
+    transition: all 0.3s;
+
+  }
+
+  .aside{
+    left: -100%;
+    transition: all 0.5s;
+  }
+
+  .active-menu{
+    left: 0 ;
+  }
+
+  .main-content{
+    padding-left:0px;
+    transition: all 0.5s;
+  }
+
+  .main-content-active{
+    padding-left:270px;
+  }
+
+}
+
+@media(max-width:610px){
+  .aside{
+    width:100%;
+    z-index: 11;
+  }
+}
+@media(max-width:485px){
+  .main-content-active{
+    padding-left:120px;
+  }
+}
