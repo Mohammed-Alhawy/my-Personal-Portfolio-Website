@@ -1,9 +1,9 @@
+/***********===== open and close style-switcher div =====***********/
 const styleSwitcherToggler=document.querySelector('.style-switcher-toggler')
 
 styleSwitcherToggler.addEventListener("click" , ()=>{
   document.querySelector(".style-switcher").classList.toggle("open")
 })
-
 
 window.addEventListener("scroll" , ()=>{
   if (document.querySelector(".style-switcher").classList.contains("open")) {
@@ -25,7 +25,7 @@ allColors.forEach( (color,index) =>{
       item.setAttribute("disabled" , "disabled")
     })
     
-    alternatStyle[index].removeAttribute("disabled" , "disabled")
+    alternatStyle[index].removeAttribute("disabled")
 
   })
 
@@ -39,11 +39,16 @@ allColors.forEach( (color,index) =>{
 
 const dayNight=document.querySelector(".day-night")
 
+window.localStorage.setItem("theme" , "dark")
+
 dayNight.addEventListener("click" , ()=>{
   document.body.classList.toggle("dark")
+
   dayNight.querySelector("i").classList.toggle("ri-sun-fill")
   dayNight.querySelector("i").classList.toggle("ri-moon-fill")
 })
+
+
 
 
 window.addEventListener("load" , ()=>{

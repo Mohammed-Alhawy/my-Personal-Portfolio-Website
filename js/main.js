@@ -1,4 +1,4 @@
-
+/***********===== open and close menu =====***********/
 const opneMenu=document.querySelector('.nav-toggler')
 const menu=document.querySelector('.aside')
 const mainContent=document.querySelector('.main-content')
@@ -23,12 +23,9 @@ opneMenu.addEventListener("click" , ()=>{
 })
 
 
-
-
-// skills respoensiv style
+/***********===== skills section respoensiv style =====***********/
 
 const skillItem=document.querySelectorAll(".skill_item")
-
 
 function chaingeSkills() {
 
@@ -47,25 +44,7 @@ function chaingeSkills2() {
 }
 
 
-
-
-
-
-
-// menu Active close and open wethn click on link
-
-// All_links.forEach(item =>{
-//   item.addEventListener("click" , ()=>{
-//     menu.classList.remove("active-menu")
-//     mainContent.classList.remove("main-content-active")
-//     opneMenu.innerHTML=`<i class="ri-menu-line"></i>`
-//     opneMenu.style.left="30px"
-//   })
-// })
-
-
-
-// Active Link in side bar with color
+/***********===== close menu wethn click on link =====***********/
 
 const All_links = document.querySelectorAll(".aside .nav a");
 
@@ -88,10 +67,6 @@ All_links.forEach((Link) => {
 });
 
 
-
-
-
-
 // =====******* typing animation ******====
 var typed = new Typed(".typing" , {
   strings:["Ui / Ux Developer" , "Front End Developer"],
@@ -99,9 +74,4 @@ var typed = new Typed(".typing" , {
   BackSpeed:250,
   loop:true
 })
-
-
-
-
-// 
 

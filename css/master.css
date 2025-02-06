@@ -51,7 +51,6 @@ img{
 
 .main-content{
   padding-left:270px;
-  /* transition: all 2s; */
   overflow: hidden;
 }
 
@@ -230,7 +229,7 @@ img{
   left: 30px;
   width: 40px;
   height: 40px;
-  background-color: var(--bg-black-50);
+  background-color: var(--bg-black-100);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -786,24 +785,3 @@ img{
   }
 
 }
-
-
-.leftToRight{
-  animation: leftToRight 2s ease;
-}
-
-@keyframes leftToRight {
-  0%{
-    transform: translateX(-50%);
-  }
-  30%{
-    transform: translateX(100%);
-  }
-  60%{
-    transform: translateX(-30%);
-  }
-  100%{
-    transform: translateX(0%);
-  }
-}
-
