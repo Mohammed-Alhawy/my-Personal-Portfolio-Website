@@ -575,12 +575,16 @@ img{
   background:  linear-gradient(to left, #434343, #000000);  ; 
 }
 
+
+
 @media(max-width:992px){
   .Skills .container .row .skill_item{
     width: 48%;
   }
 
 }
+
+
 
 @media(max-width:810px){
   .skillItem{
