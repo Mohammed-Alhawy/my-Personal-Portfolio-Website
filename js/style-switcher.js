@@ -38,24 +38,33 @@ allColors.forEach( (color,index) =>{
 
 
 const dayNight=document.querySelector(".day-night")
-
-window.localStorage.setItem("theme" , "dark")
-
-dayNight.addEventListener("click" , ()=>{
-  document.body.classList.toggle("dark")
-
-  dayNight.querySelector("i").classList.toggle("ri-sun-fill")
-  dayNight.querySelector("i").classList.toggle("ri-moon-fill")
-})
-
-// 
+const body = document.body;
 
 
-window.addEventListener("load" , ()=>{
-  if (document.body.classList.contains("dark")) {
-    dayNight.querySelector("i").classList.add("ri-sun-fill")
-  }else{
-    dayNight.querySelector("i").classList.add("ri-moon-fill")
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+
+  dayNight.querySelector("i").classList.add("ri-sun-fill")
+  dayNight.querySelector("i").classList.remove("ri-moon-fill")
+}else{
+  dayNight.querySelector("i").classList.add("ri-moon-fill")
+  dayNight.querySelector("i").classList.remove("ri-sun-fill")
+}
+
+dayNight.addEventListener("click", () => {
+  body.classList.toggle("dark");
+
+  if (body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+
+      dayNight.querySelector("i").classList.add("ri-sun-fill")
+      dayNight.querySelector("i").classList.remove("ri-moon-fill")
+  } else {
+      localStorage.setItem("theme", "light");
+      
+      dayNight.querySelector("i").classList.add("ri-moon-fill")
+      dayNight.querySelector("i").classList.remove("ri-sun-fill")
   }
-})
+});
+
 
